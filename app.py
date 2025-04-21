@@ -26,7 +26,7 @@ if st.button("Predict Rating"):
                     temperature=0.3,
                     max_tokens=10
                 )
-                predicted_rating = response["choices"][0]["message"]["content"].strip()
+                predicted_rating = response.choices[0].message.content
                 st.success(f"Predicted IMDb Rating: ⭐ {predicted_rating}")
             except Exception as e:
                 st.error(f"An error occurred: {e}")
