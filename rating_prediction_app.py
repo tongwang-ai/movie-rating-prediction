@@ -12,7 +12,7 @@ movie_summary = st.text_area("Movie Summary", height=200)
 
 if movie_summary:
     response = openai.chat.completions.create(
-        model="ft:gpt-4o-mini-2024-07-18:yale-university:movie-imdb-rating:BOfORbjI",  # e.g., "ft:gpt-4o-mini:your-org:model-id"
+        model="ft:gpt-4o-mini-2024-07-18:yale-university::BN4ORGTk",  # e.g., "ft:gpt-4o-mini:your-org:model-id"
         messages=[
             {"role": "system", "content": "You are a helpful assistant that predicts IMDb ratings based on plot synopsis of a movie."},
             {"role": "user", "content": f"Here is the plot synopsis: {movie_summary}\nRating:"}
