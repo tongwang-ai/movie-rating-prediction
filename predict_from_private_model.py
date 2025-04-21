@@ -1,12 +1,12 @@
 import streamlit as st
 import openai
-import joblib
+import pickle
 import numpy as np
 # Load the trained LGBM model from a pickle file
 
 @st.cache_resource
 def load_model():
-    return  model = joblib.load("model.joblib")
+    return  model = pickle.load(open("lgbm_movie_rating_model.pkl", "rb"))
     
 # the model is stored in the same directory 
 # e.g., train a model and then upload to github directory
