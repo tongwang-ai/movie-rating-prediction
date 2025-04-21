@@ -6,7 +6,7 @@ import numpy as np
 
 @st.cache_resource
 def load_model():
-    return  model = pickle.load(open("lgbm_movie_rating_model.pkl", "rb"))
+    return  pickle.load(open("lgbm_movie_rating_model.pkl", "rb"))
     
 # the model is stored in the same directory 
 # e.g., train a model and then upload to github directory
