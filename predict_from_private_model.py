@@ -7,6 +7,7 @@ import numpy as np
 @st.cache_resource
 def load_model():
     return  model = joblib.load("model.joblib")
+    
 # the model is stored in the same directory 
 # e.g., train a model and then upload to github directory
 model = load_model()
