@@ -6,7 +6,6 @@ import numpy as np
 
 @st.cache_resource
 def load_model():
-    # return  pickle.load(open("rating_prediction_model.pkl", "rb"))
     return joblib.load("model.joblib")
     
 # the model is stored in the same directory 
