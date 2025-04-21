@@ -3,6 +3,7 @@ import openai
 import pickle
 import numpy as np
 # Load the trained LGBM model from a pickle file
+
 @st.cache_resource
 def load_model():
     return pickle.load(open("rating_prediction_model.pkl", "rb"))
